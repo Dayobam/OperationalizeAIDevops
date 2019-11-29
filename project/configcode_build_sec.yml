@@ -17,7 +17,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Prep Environment for model creation'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/10_prepEnvModelCreation_sec.py $(amls-name) $(subscription-id) $(rg-name) $(dbr-url) $(dbr-key)'
     workingDirectory: project
@@ -25,7 +25,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Build model using Databricks'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/20_buildModelDatabricks_sec.py $(amls-name) $(subscription-id) $(rg-name) $(dbr-url) $(dbr-key) $(stor-name) $(stor-container) $(dbr-secretscope)'
     workingDirectory: project
@@ -33,7 +33,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Create image from model'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/30_createImageFromModel_sec.py $(amls-name) $(subscription-id) $(rg-name)'
     workingDirectory: project
@@ -41,7 +41,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Key rollover Databricks token'
   inputs:
-    azureSubscription: 'devopsaisec_service_connection'
+    azureSubscription: 'pluralsight_ai_service_connection'
     scriptPath: 'project/services/60_keyrollover_sec.sh'
     arguments: '$(dbr-key) $(dbr-token) $(dbr-url) $(keyvault-name) 10'
     workingDirectory: project

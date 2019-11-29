@@ -18,7 +18,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Prep Environment for model creation'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/10_prepEnvModelCreation.py'
     workingDirectory: project
@@ -26,7 +26,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Build model using Databricks'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/20_buildModelDatabricks.py'
     workingDirectory: project
@@ -34,7 +34,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Create image from model'
   inputs:
-    azureSubscription: devopsaisec_service_connection
+    azureSubscription: pluralsight_ai_service_connection
     scriptLocation: inlineScript
     inlineScript: 'python services/30_createImageFromModel.py'
     workingDirectory: project

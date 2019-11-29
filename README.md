@@ -1,2 +1,2 @@
-# Git repository for Pluralsight Course - Operationalizing AI
+## Git repository for Pluralsight Course - Operationalizing AI
 

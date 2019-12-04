@@ -1,5 +1,5 @@
 # Databricks notebook source
-# MAGIC %md Azure ML & Azure Databricks notebooks by Rene Bremer (original taken from Parashar Shah)
+# MAGIC %md Azure ML & Azure Databricks notebooks by Ifedayo Bamikole (taken from Rene Bremer (original taken from Parashar Shah))
 # MAGIC 
 # MAGIC Copyright (c) Microsoft Corporation. All rights reserved.
 # MAGIC 

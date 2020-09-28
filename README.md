@@ -1,2 +1,1 @@
-### Git repository for Pluralsight Course - Operationalizing AI
-### [Pluralsight Course](https://www.pluralsight.com/courses/microsoft-azure-operationalizing-ai-solutions)
+# Git repository for [Pluralsight Course](https://www.pluralsight.com/courses/microsoft-azure-operationalizing-ai-solutions) - Operationalizing AI
